@@ -6,12 +6,37 @@ const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 
 
 const panagrams = [ 'The','job', 'requires', 'extra', 'pluck', 'and', 'zeal', 'from', 'every', 'young', 'wage', 'earner',  'Quick', 'zephyrs', 'blow,', 'vexing', 'daft', 'Jim', 'Two', 'driven', 'jocks', 'help', 'fax', 'my', 'big', 'quiz', 'Five', 'quacking', 'zephyrs', 'jolt', 'my', 'wax', 'bed', 'The', 'five', 'boxing', 'wizards', 'jump', 'quickly', 'Pack', 'my', 'box', 'with', 'five', 'dozen', 'liquor', 'jugs', 'We', 'promptly', 'judged', 'antique', 'ivory', 'buckles', 'for', 'the', 'next', 'prize', 'Jaded', 'zombies', 'acted', 'quaintly', 'but', 'kept','driving','their','oxen','forward' ]
 
+const allLetters = [ "A" , "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N", "n", "O", "o", "P", "p", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z" ]
+
+//sum
+
+function sum(a, b) {
+  return a + b
+}f
+ //sum fat arrow es6
+let sum2 = (a, b) => a + b
+
+//is positive?
+
+function isPositive(number) {
+  return number >= 0
+}
+
+// is positive => (not needed with single param)
+let isPositive2 = number => number >= 0
+
+
 // 1a) for nums and smallNums determine every number > 0
 function greaterThan0 (currentValue){
   return currentValue >= 0;
 }
 console.log(smallNums.every(greaterThan0));
 console.log(nums.every(greaterThan0));
+
+// =>
+
+let greaterThan02 = smallNums => smallNums >= 0
+
 
 // - Filter the array for numbers less than 100
 // - Filter words that have an even length
@@ -149,6 +174,25 @@ const descending = function(a,b) {
 }
 console.log(panagram.sort(descending))
 
+//random number
+function randomNumber() {
+  return Math.random
+}
+
+// random number =>
+ let randomNumber2 = () => Math.random
 
 
+document.addEventListener('click', function() {
+  console.log('click')
+})
+
+//=>
+
+document.addEventListener('click', () => console.log('click'))
+
+// return masked string
+function maskify(cc) {
+  return cc.slice(0, -4).replace(/./g, "#") + cc.slice(-4)
+}
 
