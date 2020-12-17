@@ -196,3 +196,9 @@ function maskify(cc) {
   return cc.slice(0, -4).replace(/./g, "#") + cc.slice(-4)
 }
 
+
+//function that accepts a string parameter, and reverses each word in the string. All spaces in the string retained. "This is an example!" ==> "sihT si na !elpmaxe"
+function reverseWords(str) {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+}
