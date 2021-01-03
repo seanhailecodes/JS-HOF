@@ -179,6 +179,13 @@ function randomNumber() {
   return Math.random
 }
 
+function squareIt(number) {
+  return number ** 2;
+}
+
+console.log(squareIt(5));
+console.log(squareIt(25));
+
 // random number =>
  let randomNumber2 = () => Math.random
 
